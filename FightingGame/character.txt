@@ -1,0 +1,255 @@
+[
+  {
+    "name": "Micke",
+    "hp": 70,
+    "attack": 50,
+    "defense": 80,
+    "speed": 10,
+    "type1": 0,
+    "type2": 9,
+    "moves": [
+      {
+        "name": "Hack",
+        "power": 15,
+        "accuracy": 0.7,
+        "type": 0
+      },
+      {
+        "name": "3\u002B3=9",
+        "power": 18,
+        "accuracy": 1,
+        "type": 9
+      }
+    ]
+  },
+  {
+    "name": "Maxi",
+    "hp": 150,
+    "attack": 30,
+    "defense": 30,
+    "speed": 30,
+    "type1": 10,
+    "type2": 11,
+    "moves": [
+      {
+        "name": "Misslyckande",
+        "power": 5,
+        "accuracy": 1,
+        "type": 10
+      },
+      {
+        "name": "Korruption",
+        "power": 18,
+        "accuracy": 1,
+        "type": 10
+      }
+    ]
+  },
+  {
+    "name": "Neoo",
+    "hp": 40,
+    "attack": 40,
+    "defense": 80,
+    "speed": 30,
+    "type1": 1,
+    "type2": 9,
+    "moves": [
+      {
+        "name": "Eating",
+        "power": 2,
+        "accuracy": 1,
+        "type": 1
+      },
+      {
+        "name": "3\u002B3=9",
+        "power": 18,
+        "accuracy": 1,
+        "type": 9
+      }
+    ]
+  },
+  {
+    "name": "Samm",
+    "hp": 160,
+    "attack": 50,
+    "defense": 50,
+    "speed": 50,
+    "type1": 3,
+    "type2": 0,
+    "moves": [
+      {
+        "name": "Ta T\u00E5get",
+        "power": 12,
+        "accuracy": 0.5,
+        "type": 3
+      },
+      {
+        "name": "Google",
+        "power": 10,
+        "accuracy": 1,
+        "type": 0
+      }
+    ]
+  },
+  {
+    "name": "Java",
+    "hp": 100,
+    "attack": 70,
+    "defense": 30,
+    "speed": 10,
+    "type1": 0,
+    "type2": 11,
+    "moves": [
+      {
+        "name": "Hack",
+        "power": 15,
+        "accuracy": 0.7,
+        "type": 0
+      },
+      {
+        "name": "Google",
+        "power": 10,
+        "accuracy": 1,
+        "type": 0
+      }
+    ]
+  },
+  {
+    "name": "NTI-Estetare",
+    "hp": 60,
+    "attack": 60,
+    "defense": 60,
+    "speed": 20,
+    "type1": 8,
+    "type2": 2,
+    "moves": [
+      {
+        "name": "Draw",
+        "power": 8,
+        "accuracy": 0.9,
+        "type": 2
+      },
+      {
+        "name": "Matkort",
+        "power": 13,
+        "accuracy": 0.5,
+        "type": 8
+      }
+    ]
+  },
+  {
+    "name": "LBS-Estetare",
+    "hp": 60,
+    "attack": 60,
+    "defense": 60,
+    "speed": 30,
+    "type1": 7,
+    "type2": 2,
+    "moves": [
+      {
+        "name": "Draw",
+        "power": 8,
+        "accuracy": 0.9,
+        "type": 2
+      },
+      {
+        "name": "aTaCK",
+        "power": 10,
+        "accuracy": 0.5,
+        "type": 7
+      }
+    ]
+  },
+  {
+    "name": "Kalkonis",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "speed": 0,
+    "type1": 4,
+    "type2": 11,
+    "moves": [
+      {
+        "name": "Become Dinner",
+        "power": 18,
+        "accuracy": 1,
+        "type": 4
+      },
+      {
+        "name": "Become Dinner",
+        "power": 18,
+        "accuracy": 1,
+        "type": 4
+      }
+    ]
+  },
+  {
+    "name": "Unity",
+    "hp": 100,
+    "attack": 75,
+    "defense": 50,
+    "speed": 25,
+    "type1": 5,
+    "type2": 11,
+    "moves": [
+      {
+        "name": "Bad Bussnies",
+        "power": 15,
+        "accuracy": 1,
+        "type": 5
+      },
+      {
+        "name": "Debug.Log",
+        "power": 24,
+        "accuracy": 0.1,
+        "type": 5
+      }
+    ]
+  },
+  {
+    "name": "Godot",
+    "hp": 50,
+    "attack": 70,
+    "defense": 40,
+    "speed": 70,
+    "type1": 6,
+    "type2": 11,
+    "moves": [
+      {
+        "name": "gd-script",
+        "power": 7,
+        "accuracy": 1,
+        "type": 6
+      },
+      {
+        "name": "Logggaaaa",
+        "power": 20,
+        "accuracy": 0.6,
+        "type": 6
+      }
+    ]
+  },
+  {
+    "name": "Alien",
+    "hp": 70,
+    "attack": 180,
+    "defense": 0,
+    "speed": 100,
+    "type1": 6,
+    "type2": 10,
+    "moves": [
+      {
+        "name": "Logggaaaa",
+        "power": 20,
+        "accuracy": 0.6,
+        "type": 6
+      },
+      {
+        "name": "Korruption",
+        "power": 18,
+        "accuracy": 1,
+        "type": 10
+      }
+    ]
+  }
+]

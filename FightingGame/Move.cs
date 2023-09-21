@@ -1,54 +1,70 @@
-using System.Diagnostics;
 
-class Move{
+class Move
+{
     const int maxPowerPoints = 25;
-    int usedPowerPoints = 0;
+    int usedPowerPoints { get; set; }
 
-    public string name = "Unamed Move";
-    public int power = 10;
-    public int accuracy = 1;
-    public statusEffect statusEffect = statusEffect.none;
+    public string name  { get; set; }
+    public int power { get; set; }
+    public float accuracy { get; set; }
+    public Types type{ get; set; }
 
-    public Move(){}
+    public Move() { }
 
-    public void setName(String name) {
-        this.name = name;
+    public bool setName(String name)
+    {
+        if (checkStringLenght(name)){
+            this.name = name;
+            return true;
+        }
+        return false;
     }
-    public void setPower(int power) {
-        if (checkUserPowerRemaining(power)){
+    public bool setPower(int power)
+    {
+        if (checkUserPowerRemaining(power))
+        {
             this.power = power;
+            return true;
         }
+        return false;
     }
-    public void setAccuracy(int accuracy) {
-        this.accuracy = accuracy;
-    }
-    public void setStatusEffects(statusEffect userStatusEffect) {
-        if (userStatusEffect == statusEffect.none) {
-            this.statusEffect = statusEffect.none;
-            return;
+    public bool setAccuracy(float accuracy)
+    {
+        if (accuracy <= 1 && accuracy >= 0){
+            if (checkUserPowerRemaining(accuracy * 7)){
+                this.accuracy = accuracy;
+                return true;
+            }
         }
-        else if (checkUserPowerRemaining(10)){
-            this.statusEffect = userStatusEffect;
-            return;
-        }
+        return false;
     }
 
-    bool checkUserPowerRemaining(int newPowerPoints){
-        if (usedPowerPoints + newPowerPoints > maxPowerPoints) {
-            Console.WriteLine("To many power points used, you can reduce power points for other attribrutes or use less powerpoints here. PowerPoints left:" + (maxPowerPoints-usedPowerPoints));
+    public void setType(Types type){
+        this.type = type;
+    }
+
+    bool checkUserPowerRemaining(float newPowerPoints)
+    {
+        if (usedPowerPoints + newPowerPoints > maxPowerPoints)
+        {
+            Console.WriteLine("To many power points used, you can reduce power points for other attribrutes or use less powerpoints here. PowerPoints left:" + (maxPowerPoints - usedPowerPoints));
             return false;
         }
+        usedPowerPoints += (int)newPowerPoints;
         Console.WriteLine("The value is set");
         return true;
     }
 
-bool checkStringLenght(string userString){
-    if (userString.Length >= 4 && userString.Length <= 10){
-        return true;
+    bool checkStringLenght(string userString)
+    {
+        if (userString.Length >= 4 && userString.Length <= 20)
+        {
+            return true;
+        }
+        return false;
     }
-    return false;
-}
 
+    public int powerRemaining(){
+        return maxPowerPoints-usedPowerPoints;
+    }
 }
-
-public enum statusEffect{Posion, Burn, none}
