@@ -53,6 +53,7 @@ class Character
         if (checkUserPowerRemaining(def))
         {
             this.defense = def;
+            if (defense == 0){defense = 1;}
             return true;
         }
         return false;

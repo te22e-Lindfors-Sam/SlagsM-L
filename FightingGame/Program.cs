@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 Dictionary<Types, Dictionary<Types, float>> typeChart = new()
 {
@@ -13,8 +14,9 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.Godot, 2},
             {Types.LBS, 1},
             {Types.NTI, 1},
-            {Types.Nörd, 0},
+            {Types.Nörd, 0.1f},
             {Types.Anarkist, 1},
+            {Types.none, 1},
         }
     },
 
@@ -31,12 +33,13 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.NTI, 1},
             {Types.Nörd, 1},
             {Types.Anarkist, 2},
+            {Types.none, 1},
         }
     },
 
     {Types.Estetare, new Dictionary<Types, float>()
         {
-            {Types.Programmer, 0},
+            {Types.Programmer, 0.1f},
             {Types.Skeleton, 1},
             {Types.Estetare, 1},
             {Types.Nynäshamnare, 1},
@@ -45,8 +48,9 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.Godot, 0.5f},
             {Types.LBS, 2},
             {Types.NTI, 1},
-            {Types.Nörd, 0},
+            {Types.Nörd, 0.1f},
             {Types.Anarkist, 2},
+            {Types.none, 1},
         }
     },
 
@@ -63,6 +67,7 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.NTI, 1},
             {Types.Nörd, 1},
             {Types.Anarkist, 2},
+            {Types.none, 1},
         }
     },
 
@@ -71,7 +76,7 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.Programmer, 1},
             {Types.Skeleton, 2},
             {Types.Estetare, 1},
-            {Types.Nynäshamnare, 0},
+            {Types.Nynäshamnare, 0.1f},
             {Types.Kalkon, 1},
             {Types.Unity, 1},
             {Types.Godot, 1},
@@ -79,6 +84,7 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.NTI, 2},
             {Types.Nörd, 0.5f},
             {Types.Anarkist, 0.5f},
+            {Types.none, 1},
         }
     },
 
@@ -90,11 +96,12 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.Nynäshamnare, 1},
             {Types.Kalkon, 1},
             {Types.Unity, 1},
-            {Types.Godot, 0},
+            {Types.Godot, 0.1f},
             {Types.LBS, 2},
             {Types.NTI, 2},
             {Types.Nörd, 2},
             {Types.Anarkist, 1},
+            {Types.none, 1},
         }
     },
 
@@ -104,13 +111,14 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.Skeleton, 0.5f},
             {Types.Estetare, 2},
             {Types.Nynäshamnare, 0.5f},
-            {Types.Kalkon, 0},
+            {Types.Kalkon, 0.1f},
             {Types.Unity, 2},
             {Types.Godot, 1},
             {Types.LBS, 2},
             {Types.NTI, 2},
             {Types.Nörd, 2},
-            {Types.Anarkist, 0},
+            {Types.Anarkist, 0.1f},
+            {Types.none, 1},
         }
     },
 
@@ -118,15 +126,16 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
         {
             {Types.Programmer, 1},
             {Types.Skeleton, 1},
-            {Types.Estetare, 0},
+            {Types.Estetare, 0.1f},
             {Types.Nynäshamnare, 2},
             {Types.Kalkon, 1},
             {Types.Unity, 1},
             {Types.Godot, 1},
             {Types.LBS, 1},
-            {Types.NTI, 0},
+            {Types.NTI, 0.1f},
             {Types.Nörd, 2},
             {Types.Anarkist, 0.5f},
+            {Types.none, 1},
         }
     },
 
@@ -134,7 +143,7 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
         {
             {Types.Programmer, 1},
             {Types.Skeleton, 1},
-            {Types.Estetare, 0},
+            {Types.Estetare, 0.1f},
             {Types.Nynäshamnare, 1},
             {Types.Kalkon, 2},
             {Types.Unity, 1},
@@ -143,6 +152,7 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.NTI, 1},
             {Types.Nörd, 2},
             {Types.Anarkist, 0.5f},
+            {Types.none, 1},
         }
     },
 
@@ -150,7 +160,7 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
         {
             {Types.Programmer, 2},
             {Types.Skeleton, 0.5f},
-            {Types.Estetare, 0},
+            {Types.Estetare, 0.1f},
             {Types.Nynäshamnare, 0.5f},
             {Types.Kalkon, 0.5f},
             {Types.Unity, 1},
@@ -158,7 +168,8 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.LBS, 2},
             {Types.NTI, 1},
             {Types.Nörd, 2},
-            {Types.Anarkist, 0},
+            {Types.Anarkist, 0.1f},
+            {Types.none, 1},
         }
     },
 
@@ -174,7 +185,25 @@ Dictionary<Types, Dictionary<Types, float>> typeChart = new()
             {Types.LBS, 2},
             {Types.NTI, 2},
             {Types.Nörd, 1},
-            {Types.Anarkist, 0},
+            {Types.Anarkist, 0.1f},
+            {Types.none, 1},
+        }
+    },
+
+    {Types.none, new Dictionary<Types, float>()
+        {
+            {Types.Programmer, 1},
+            {Types.Skeleton, 1},
+            {Types.Estetare, 1},
+            {Types.Nynäshamnare, 1},
+            {Types.Kalkon, 1},
+            {Types.Unity, 1},
+            {Types.Godot, 1},
+            {Types.LBS, 1},
+            {Types.NTI, 1},
+            {Types.Nörd, 1},
+            {Types.Anarkist, 1},
+            {Types.none, 1},
         }
     }
 };
@@ -247,20 +276,6 @@ void gameManager()
     writeData();
 }
 
-/*
-Micke Prog NÖRD
-Maxi Anarkist
-NEO Skelet
-Sam Nynäsham Prog
-Java Prog
-NTI-Estetare NTI eset
-LBS-Estetare LBS est
-Kalkonis Kalkon
-Unity Unity 
-Godot Godot
-Alien Godot Anarkist
-*/
-
 #region Play
 
 void Play()
@@ -270,6 +285,7 @@ void Play()
         Console.WriteLine("What mode do you want to play?");
         Console.WriteLine("A: Player vs Bot");
         Console.WriteLine("B: Player vs Player");
+        Console.WriteLine("C: Back");
 
         string reps = Console.ReadLine();
         if (reps.ToUpper() == "A")
@@ -279,7 +295,12 @@ void Play()
         }
         else if (reps.ToUpper() == "B")
         {
-
+            playAgianstHuman();
+        }
+        else if (reps.ToUpper() == "C")
+        {
+            Console.Clear();
+            return;
         }
         else
         {
@@ -292,10 +313,11 @@ void playAgianstBot()
 {
     Console.WriteLine("YOU HAVE CHOOSEN DEATH");
     Console.WriteLine("");
-    Console.WriteLine("Choose your character");
-
     Character bot = Characters[rand.Next(0, Characters.Count)];
     bot.currentHp = bot.hp;
+    Console.WriteLine("Boten Valde: " + bot.name);
+    Console.WriteLine("Choose your character");
+
     Character player;
 
     printCurrentCharacters();
@@ -330,27 +352,31 @@ void playAgianstBot()
         if (player.speed > bot.speed)
         {
             humanRound(player, bot);
-            if (bot.hp > 0)
+            if (bot.currentHp <= 0)
             {
                 win(player, bot);
+                break;
             }
             botRound(player, bot);
-            if (player.hp > 0)
+            if (player.currentHp <= 0)
             {
                 win(bot, player);
+                break;
             }
         }
         else
         {
             botRound(player, bot);
-            if (player.hp > 0)
+            if (player.currentHp <= 0)
             {
                 win(bot, player);
+                break;
             }
             humanRound(player, bot);
-            if (bot.hp > 0)
+            if (bot.currentHp <= 0)
             {
                 win(player, bot);
+                break;
             }
         }
     }
@@ -358,28 +384,180 @@ void playAgianstBot()
 
 void playAgianstHuman()
 {
+    Console.WriteLine("MAY THE BEST FIGHTER WIN");
+    Console.WriteLine("");
+
+    Console.WriteLine("Choose your character Player 1");
+    Character player1;
+    printCurrentCharacters();
+    while (true)
+    {
+        string reps = Console.ReadLine();
+        int value = 0;
+        if (int.TryParse(reps, out value))
+        {
+            if (value >= 0 || value <= Characters.Count)
+            {
+                player1 = Characters[value];
+                Console.WriteLine("YOU CHOOSE " + player1.name);
+                player1.currentHp = player1.hp;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("That is not an option");
+            }
+        }
+        else
+        {
+            Console.WriteLine("That is not an option");
+        }
+    }
+
+    Console.WriteLine("Choose your character Player 2");
+    Character player2;
+    printCurrentCharacters();
+    while (true)
+    {
+        string reps = Console.ReadLine();
+        int value = 0;
+        if (int.TryParse(reps, out value))
+        {
+            if (value >= 0 || value <= Characters.Count)
+            {
+                player2 = Characters[value];
+                Console.WriteLine("YOU CHOOSE " + player2.name);
+                player2.currentHp = player2.hp;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("That is not an option");
+            }
+        }
+        else
+        {
+            Console.WriteLine("That is not an option");
+        }
+    }
+
+    Console.WriteLine("BEGIN THE FIGHT");
+
+    while (true)
+    {
+        if (player1.speed > player2.speed)
+        {
+            humanRound(player1, player2);
+            if (player2.currentHp <= 0)
+            {
+                win(player1, player2);
+                break;
+            }
+            humanRound(player2, player1);
+            if (player1.currentHp <= 0)
+            {
+                win(player2, player1);
+                break;
+            }
+        }
+        else
+        {
+            humanRound(player2, player1);
+            if (player1.currentHp <= 0)
+            {
+                win(player2, player1);
+                break;
+            }
+            humanRound(player1, player2);
+            if (player2.currentHp <= 0)
+            {
+                win(player1, player2);
+                break;
+            }
+        }
+    }
 
 }
 
 void humanRound(Character player, Character opponent)
 {
+    Console.WriteLine(player.name + " turn");
+    Console.WriteLine("Välj Attack");
 
+    Move playerMove;
+
+    while (true)
+    {
+        Console.WriteLine("0: " + player.moves[0].name);
+        Console.WriteLine("1: " + player.moves[1].name);
+
+        string resp = Console.ReadLine();
+
+        if (resp.ToUpper() == "0")
+        {
+            playerMove = player.moves[0];
+            break;
+        }
+        else if (resp.ToUpper() == "1")
+        {
+            playerMove = player.moves[1];
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Den attacken har du inte");
+        }
+    }
+    if (playerMove.accuracy * 10 < rand.Next(0, 10))
+    {
+        Console.WriteLine("Du missade");
+        Console.WriteLine("");
+        Thread.Sleep(2000);
+        return;
+    }
+    Console.WriteLine("Du attackerar med " + playerMove.name);
+
+    int attackPower = (int)Math.Ceiling(player.attack * playerMove.power / 1.5f * (typeChart[playerMove.type][opponent.type1] + typeChart[playerMove.type][opponent.type2] / 2));
+    int damage = attackPower / opponent.defense;
+    damage += rand.Next(-5, 6);
+    if (damage <= 3) { damage = 3; }
+    opponent.currentHp -= damage;
+    Console.WriteLine("Den gjorde " + damage + " skada, motståndaren har nu " + opponent.currentHp + " hp");
+    Console.WriteLine("");
+    Thread.Sleep(2000);
 }
 
 void botRound(Character player, Character bot)
 {
+
     Move botMove = bot.moves[rand.Next(0, bot.moves.Length)];
 
     Console.WriteLine("Bots turn");
-    Console.WriteLine("The Bot attacks with " + botMove.name);
 
-    int attackPower = bot.attack * botMove.power;
+    if (botMove.accuracy * 10 < rand.Next(0, 10))
+    {
+        Console.WriteLine("Botten missade");
+        Console.WriteLine("");
+        Thread.Sleep(2000);
+        return;
+    }
 
+    Console.WriteLine("Botten attackerar med " + botMove.name);
+    int attackPower = (int)Math.Ceiling(bot.attack * botMove.power / 1.5f * (typeChart[botMove.type][player.type1] + typeChart[botMove.type][player.type2] / 2));
+    int damage = attackPower / player.defense;
+    damage += rand.Next(-5, 6);
+    if (damage <= 3) { damage = 3; }
+    player.currentHp -= damage;
+    Console.WriteLine("Den gjorde " + damage + " skada, du har nu " + player.currentHp + " hp");
+    Console.WriteLine("");
+    Thread.Sleep(2000);
 }
 
 void win(Character winner, Character loser)
 {
-
+    Console.WriteLine(winner.name + " VANN");
+    Thread.Sleep(5000);
+    Console.Clear();
 }
 
 
@@ -720,7 +898,8 @@ void setCharacterType(Character character)
         }
         string type = Console.ReadLine();
 
-        if (type.ToUpper() == "NONE"){
+        if (type.ToUpper() == "NONE")
+        {
             character.type2 = Types.none;
             break;
         }

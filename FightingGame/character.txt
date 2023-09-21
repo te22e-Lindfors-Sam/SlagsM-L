@@ -233,7 +233,7 @@
     "name": "Alien",
     "hp": 70,
     "attack": 180,
-    "defense": 0,
+    "defense": 10,
     "speed": 100,
     "type1": 6,
     "type2": 10,
